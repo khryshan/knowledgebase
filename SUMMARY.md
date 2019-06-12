@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [guide](guide.md)
 
 ## interview question
 

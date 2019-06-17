@@ -10,3 +10,7 @@
 
 * [Features](react/features.md)
 
+## Basic knowlarge
+
+* [Function](basic-knowlarge/function.md)
+

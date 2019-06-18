@@ -8,7 +8,8 @@
 
 ## React
 
-* [Features](react/features.md)
+* [Guide of recommends](react/features.md)
+* [API](react/api.md)
 
 ## Basic knowlarge
 

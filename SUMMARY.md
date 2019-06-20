@@ -5,6 +5,7 @@
 ## interview question
 
 * [Core JS](interview-question/core-js.md)
+* [Promise](interview-question/promise.md)
 
 ## React
 

@@ -5,7 +5,6 @@
 ## interview question
 
 * [Core JS](interview-question/core-js.md)
-* [Promise](interview-question/promise.md)
 
 ## React
 
@@ -14,6 +13,7 @@
 
 ## Basic knowlarge
 
-* [Function](basic-knowlarge/function.md)
 * [CSS](basic-knowlarge/css.md)
+* [Function](basic-knowlarge/function.md)
+* [Promise](basic-knowlarge/promise.md)
 

@@ -13,6 +13,7 @@
 
 ## Basic knowlarge
 
+* [GIT](basic-knowlarge/git.md)
 * [CSS](basic-knowlarge/css.md)
 * [Function](basic-knowlarge/function.md)
 * [Promise](basic-knowlarge/promise.md)

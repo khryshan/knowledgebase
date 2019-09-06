@@ -17,4 +17,6 @@
 * [CSS](basic-knowlarge/css.md)
 * [Function](basic-knowlarge/function.md)
 * [Promise](basic-knowlarge/promise.md)
+* [REST](basic-knowlarge/rest.md)
+* [GraphQL](basic-knowlarge/graphql.md)
 

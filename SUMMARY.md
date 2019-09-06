@@ -19,4 +19,5 @@
 * [Promise](basic-knowlarge/promise.md)
 * [REST](basic-knowlarge/rest.md)
 * [GraphQL](basic-knowlarge/graphql.md)
+* [Naming](basic-knowlarge/naming.md)
 

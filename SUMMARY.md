@@ -22,5 +22,6 @@
 * [REST](basic-knowlarge/rest.md)
 * [GraphQL](basic-knowlarge/graphql.md)
 * [Quality code](basic-knowlarge/quality-code-1/README.md)
+  * [Abstraction](basic-knowlarge/quality-code-1/abstraction.md)
   * [Naming](basic-knowlarge/quality-code-1/naming.md)
 

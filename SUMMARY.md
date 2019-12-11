@@ -21,6 +21,7 @@
 * [Promise](basic-knowlarge/promise.md)
 * [REST](basic-knowlarge/rest.md)
 * [GraphQL](basic-knowlarge/graphql.md)
-* [Quality code](basic-knowlarge/quality-code/README.md)
-  * [Naming](basic-knowlarge/quality-code/naming.md)
+* [Quality code](basic-knowlarge/quality-code.md)
+* [Quality code](basic-knowlarge/quality-code-1/README.md)
+  * [Naming](basic-knowlarge/quality-code-1/naming.md)
 

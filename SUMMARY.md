@@ -10,15 +10,13 @@
 ## React
 
 * [Useful react components](react/useful-react-components.md)
-* [Guide of recommends](react/features.md)
+* [Guide of recommends](react/guide-of-recommends.md)
 * [Web API](react/api.md)
 
-## Basic knowlarge
+## Basic knowledge <a id="basic-knowlarge"></a>
 
 * [GIT](basic-knowlarge/git.md)
 * [Function](basic-knowlarge/function.md)
-* [REST](basic-knowlarge/rest.md)
-* [GraphQL](basic-knowlarge/graphql.md)
 * [Quality code](basic-knowlarge/quality-code-1/README.md)
   * [Abstraction](basic-knowlarge/quality-code-1/abstraction.md)
   * [Naming](basic-knowlarge/quality-code-1/naming.md)
@@ -31,6 +29,11 @@
 
 ## CSS <a id="css-1"></a>
 
-* [Patterns](css-1/patterns.md)
+* [CSS Patterns](css-1/css-patterns.md)
 * [CSS Architecture](css-1/css-architecture.md)
+
+## Network
+
+* [REST](network/rest.md)
+* [GraphQL](network/graphql.md)
 

@@ -1,6 +1,6 @@
-# API
+# Web API
 
-### Запрос данных к API
+### Запрос данных к API \(axios\)
 
 {% hint style="info" %}
 more here [https://github.com/Turanchoks/use-axios-request](https://github.com/Turanchoks/use-axios-request)

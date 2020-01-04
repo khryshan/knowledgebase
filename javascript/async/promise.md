@@ -29,7 +29,7 @@ console.log(promise1);
 
 Вот что выведет этот код:
 
-![](../.gitbook/assets/8e2f527a185616e8dbb6fa3433303d54.png)
+![](../../.gitbook/assets/8e2f527a185616e8dbb6fa3433303d54.png)
 
 Так как наш промис мгновенно разрешается, исследовать его начальное состояние мы не можем. Поэтому давайте создадим новый промис, прибегнув к функции `setTimeout`
 
@@ -47,11 +47,11 @@ console.log(promise2);
 
 В этом коде создаётся промис, который безусловно разрешится через 10 секунд. Это даёт нам возможность взглянуть на состояние неразрешённого промиса.
 
-![](../.gitbook/assets/bd482813d5a8d53df3eb39b716b8c0b7.png)
+![](../../.gitbook/assets/bd482813d5a8d53df3eb39b716b8c0b7.png)
 
 После того, как пройдут 10 секунд, промис будет разрешён. В результате и `PromiseStatus`, и `PromiseValue` будут соответствующим образом обновлены. 
 
-![](../.gitbook/assets/707ff774ad727f4e41a247714182d7fd.png)
+![](../../.gitbook/assets/707ff774ad727f4e41a247714182d7fd.png)
 
 Взглянем теперь на промис, который мы решили не разрешить, а отклонить. Для этого модифицируем тот код, который уже использовался в первом примере.
 
@@ -67,7 +67,7 @@ promise3 = new Promise(function(resolve, reject) {
 console.log(promise3);
 ```
 
-![](../.gitbook/assets/bd1cd1aa66cdd5969cb7e8726236938d.png)
+![](../../.gitbook/assets/bd1cd1aa66cdd5969cb7e8726236938d.png)
 
 Теперь, проанализировав все три примера, мы можем видеть, что в `PromiseStatus` могут появляться три разных значения: `pending` \(ожидание\), `resolved` \(успешное разрешение\) и `rejected` \(отклонение\). Когда промис создаётся, в `PromiseStatus` будет значение `pending`, а в `PromiseValue` будет `undefined`. Эти значения будут сохраняться до разрешения или отклонения промиса. Когда промис находится в состоянии `resolved` или `rejected`, его называют заданным \(`settled`\) промисом. Такой промис перешёл из состояния ожидания в состояние, в котором он имеет либо состояние `resolved`, либо состояние `rejected`.
 
@@ -134,7 +134,7 @@ httpGet('/article/promise/user.json')
   .then(JSON.parse)
 ```
 
-![](../.gitbook/assets/promiseloadavatarchain-1-2x.png)
+![](../../.gitbook/assets/promiseloadavatarchain-1-2x.png)
 
 Если промис завершился через `resolve`, то результат – в `JSON.parse`, если `reject` – то в Thrower.
 

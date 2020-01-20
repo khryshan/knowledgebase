@@ -16,6 +16,7 @@
 
 ## Basic knowledge <a id="basic-knowlarge"></a>
 
+* [Testing](basic-knowlarge/testing.md)
 * [GIT](basic-knowlarge/git.md)
 * [Function](basic-knowlarge/function.md)
 * [Quality code](basic-knowlarge/quality-code-1/README.md)

@@ -10,6 +10,7 @@
 ## React
 
 * [Common notes](react/common-notes.md)
+* [Redux](react/redux.md)
 * [Useful react components](react/useful-react-components.md)
 * [Guide of recommends](react/guide-of-recommends.md)
 * [Web API](react/api.md)

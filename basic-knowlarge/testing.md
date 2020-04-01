@@ -24,8 +24,6 @@ Integration tests are a bit more complex than unit tests because you now have to
 
 * **End-to-End \(e2e\) or UI tests** which test a full interaction path in your app \(e.g. the signup process\)
 
-
-
 These kind of tests have a different level of complexity to write them and a different frequency.
 
 ![](../.gitbook/assets/image%20%285%29.png)

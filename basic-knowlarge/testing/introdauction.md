@@ -1,4 +1,4 @@
-# Introduction
+# Introdauction
 
 ### Reasons for testing
 
@@ -14,21 +14,23 @@ Why would it be a good idea to write automated tests? There are many reasons; he
 
 Unit tests are the easiest tests to write because you have some input and can expect some result. There are no dependencies, no complex interactions.
 
-![Unit tests](../.gitbook/assets/image%20%284%29.png)
+![Unit tests](../../.gitbook/assets/image%20%284%29.png)
 
 * **Integration tests** which test the combination of features \(e.g. a function calling another function\)
 
 Integration tests are a bit more complex than unit tests because you now have to deal with some dependencies \(e.g. another function that gets called\).
 
-![Interration tests](../.gitbook/assets/image%20%281%29.png)
+![Interration tests](../../.gitbook/assets/image%20%281%29.png)
 
 * **End-to-End \(e2e\) or UI tests** which test a full interaction path in your app \(e.g. the signup process\)
 
+
+
 These kind of tests have a different level of complexity to write them and a different frequency.
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
-
+### Tools for Testing
 
 ### 
 

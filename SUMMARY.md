@@ -17,7 +17,8 @@
 
 ## Basic knowledge <a id="basic-knowlarge"></a>
 
-* [Introduction](basic-knowlarge/testing.md)
+* [React Testing](basic-knowlarge/testing/README.md)
+  * [Introdauction](basic-knowlarge/testing/introdauction.md)
 * [GIT](basic-knowlarge/git.md)
 * [Function](basic-knowlarge/function.md)
 * [Quality code](basic-knowlarge/quality-code-1/README.md)

@@ -1,6 +1,6 @@
 # Introduction
 
-## Reasons for testing
+### Reasons for testing
 
 Why would it be a good idea to write automated tests? There are many reasons; here are some of our reasons:
 
@@ -8,7 +8,7 @@ Why would it be a good idea to write automated tests? There are many reasons; he
 * To make sure things won’t break between new code commits.
 * To keep tests as living documentations.
 
-## Types of testing
+### Types of testing
 
 * **Unit tests** that test one isolated unit/ piece of code \(e.g. a function\)
 

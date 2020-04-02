@@ -177,7 +177,7 @@ export default Basic;
 
 Our snapshots will fail
 
-![](../.gitbook/assets/snimok-ekrana-2020-04-02-v-15.18.03.png)
+![](../.gitbook/assets/snimok-ekrana-2020-04-02-v-15.25.57.png)
 
 If we want to update our snapshot we'll just need to press "w" to activate watch mode then press "u" to update the snapshot. So our snapshot file will be automatically updated with the new snapshot and will pass our tests. 
 

@@ -73,7 +73,10 @@ export const sum = (a, b) => {
 ```
 {% endcode %}
 
-{% code title="utils.test.js" %}
+
+
+{% tabs %}
+{% tab title="utils.test.js" %}
 ```javascript
 import { sum } from "./utils";
 
@@ -88,7 +91,8 @@ describe('Testing sum', () => {
       }) 
 });
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 `describe` wraps our `it` or `test` blocks, and is a way to group our tests. Both `it` and `test` are keywords and can be used interchangeably. The string will be something that should happen with your tests and will be printed to the console. Jest provides a built-in [`expect()`](https://jestjs.io/docs/en/expect) global function for making assertions.`toBe()` _\*\*_is a matcher that works with expect to allow you to make assertions. There are many more [matchers](https://jestjs.io/docs/en/using-matchers) and [global variables](https://jestjs.io/docs/en/api) offered by jest.
 

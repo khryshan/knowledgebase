@@ -53,6 +53,8 @@ import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 ```
 
+We import our Adapter to make enzyme work with react 16 and initialize it as shown above.
+
 And you should manually create the property `setupFilesAfterEnv` in the configuration for Jest into package.json file \([read here](https://create-react-app.dev/docs/running-tests/#initializing-test-environment)\), something like the following:
 
 ```text
@@ -65,19 +67,17 @@ And you should manually create the property `setupFilesAfterEnv` in the configur
 
 ### Writing Tests
 
-{% code title="utils.js" %}
 ```javascript
+// utils.js
+
 export const sum = (a, b) => {
   return a + b;
 };
 ```
-{% endcode %}
 
-
-
-{% tabs %}
-{% tab title="utils.test.js" %}
 ```javascript
+// utils.test.js
+
 import { sum } from "./utils";
 
 describe('Testing sum', () => {
@@ -91,12 +91,113 @@ describe('Testing sum', () => {
       }) 
 });
 ```
-{% endtab %}
-{% endtabs %}
 
-`describe` wraps our `it` or `test` blocks, and is a way to group our tests. Both `it` and `test` are keywords and can be used interchangeably. The string will be something that should happen with your tests and will be printed to the console. Jest provides a built-in [`expect()`](https://jestjs.io/docs/en/expect) global function for making assertions.`toBe()` _\*\*_is a matcher that works with expect to allow you to make assertions. There are many more [matchers](https://jestjs.io/docs/en/using-matchers) and [global variables](https://jestjs.io/docs/en/api) offered by jest.
+`describe` wraps our `it` or `test` blocks, and is a way to group our tests. Both `it` and `test` are keywords and can be used interchangeably. The string will be something that should happen with your tests and will be printed to the console. Jest provides a built-in [`expect()`](https://jestjs.io/docs/en/expect) global function for making assertions.`toBe()` is a matcher that works with expect to allow you to make assertions. There are many more [matchers](https://jestjs.io/docs/en/using-matchers) and [global variables](https://jestjs.io/docs/en/api) offered by jest.
 
 ### SnapShot Testing
+
+Here is our basic component we are snapshot testing:
+
+```javascript
+// Basic.js
+
+import React from "react";
+
+const Basic = () => {
+  return (
+    <div>
+      <h1> Basic Test </h1>
+      <p> This is a basic Test Component</p>
+    </div>
+  );
+};
+
+export default Basic;
+```
+
+```javascript
+// Basic.test.js
+// test which is a snapshot test
+
+import React from "react";
+import { shallow } from "enzyme";
+import toJson from "enzyme-to-json";
+
+import Basic from "./Basic";
+
+describe("snapshot", () => {
+  it("renders correctly", () => {
+    const wrapper = shallow(<Basic />);
+
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+});
+```
+
+Import the [`shallow`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/shallow.html) function from the `enzyme` library. Shallow renders the root node and returns a shallow wrapper around it.
+
+Import the `toJson` function from the [`enzyme-to-json`](https://www.npmjs.com/package/enzyme-to-json) library. It will need this to convert our shallow rendered component into JSON which can be saved to the snapshot file
+
+If we'll ran the command yarn test, a `__snapshots__` folder and `basic.test.js.snap` file will be created for you automatically. On every subsequent test the new snapshot will be compared to the existing snapshot file. The test will pass if the snapshot has not changed and fail if it has changed.
+
+Running the above test will generate a file that will look like this. This is essentially our tree of React DOM nodes.
+
+```javascript
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot renders correctly 1`] = `
+<div>
+  <h1>
+     Basic Test 
+  </h1>
+  <p>
+     This is a basic Test Component
+  </p>
+</div>
+`;
+```
+
+However, what happens if we changed our basic component, for example, we deleted paragraph
+
+```javascript
+// Basic.js
+
+import React from "react";
+
+const Basic = () => {
+  return (
+    <div>
+      <h1> Basic Test </h1>
+    </div>
+  );
+};
+
+export default Basic;
+```
+
+Our snapshots will fail
+
+![](../.gitbook/assets/snimok-ekrana-2020-04-02-v-15.18.03.png)
+
+If we want to update our snapshot we'll just need to press "w" to activate watch mode then press "u" to update the snapshot. So our snapshot file will be automatically updated with the new snapshot and will pass our tests. 
+
+```javascript
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot renders correctly 1`] = `
+<div>
+  <h1>
+     Basic Test 
+  </h1>
+</div>
+`;
+```
+
+
+
+
+
+
 
 ## Useful links
 

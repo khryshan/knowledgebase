@@ -23,7 +23,7 @@ Unit tests are the easiest tests to write because you have some input and can ex
 
 Integration tests are a bit more complex than unit tests because you now have to deal with some dependencies \(e.g. another function that gets called\).
 
-![Interration tests](../.gitbook/assets/image (4).png)
+![Interration tests](../.gitbook/assets/image%(4).png)
 
 * **End-to-End \(e2e\) or UI tests** which test a full interaction path in your app \(e.g. the signup process\)
 

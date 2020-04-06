@@ -134,7 +134,11 @@ describe("snapshot", () => {
 });
 ```
 
-Import the [`shallow`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/shallow.html) function from the `enzyme` library. Shallow renders the root node and returns a shallow wrapper around it.
+Import the [`shallow`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/shallow.html) function from the `enzyme` library. Enzyme comes with 3 different "levels" of these functions, each providing slightly different functionality:
+
+* `render`: Just give the HTML rendered output of the component. Useful when you just care about the HTML.
+* `shallow`: Give a light-weight representation of what the component renders.
+* `mount`: Give a full DOM representation of the component, allowing for full traversal, events, etc... useful for testing DOM events such as onClick, onSubmit, etc...
 
 Import the `toJson` function from the [`enzyme-to-json`](https://www.npmjs.com/package/enzyme-to-json) library. It will need this to convert our shallow rendered component into JSON which can be saved to the snapshot file
 

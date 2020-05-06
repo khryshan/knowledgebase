@@ -197,6 +197,132 @@ exports[`snapshot renders correctly 1`] = `
 `;
 ```
 
+### Testing Component
+
+The most basic usage of the Enzyme library is the shallow rendering. It allows you to render only the parent component without its children. It makes the ****shallow rendering not only fast but also great for unit testing. 
+
+```javascript
+//ToDoList.js
+
+import React from 'react';
+ 
+const ToDoList = (props) => {
+  return (
+    <ul>
+      {
+        props.tasks.map((taskName, index) =>
+          <li key={index}>{taskName}</li>
+        )
+      }
+    </ul>
+  )
+};
+ 
+export default ToDoList;
+```
+
+```javascript
+//ToDoList.test.js
+
+import React from 'react';
+import { shallow } from 'enzyme';
+import ToDoList from './ToDoList';
+ 
+describe('ToDoList component', () => {
+  describe('when provided with an empty array of tasks', () => {
+    it('contains an empty <ul> element', () => {
+      const toDoList = shallow(<ToDoList tasks={[]}/>);
+      expect(toDoList.html()).toEqual("<ul></ul>");
+    })
+    it('does not contain any <li> elements', () => {
+      const toDoList = shallow(<ToDoList tasks={[]}/>);
+      expect(toDoList.find('li').length).toEqual(0);
+    })
+  });
+ 
+  describe('when provided with an array of tasks', () => {
+    it('contains a matching number of <li> elements', () => {
+      const tasks = ['Wash the dishes', 'Make the bed'];
+      const toDoList = shallow(<ToDoList tasks={tasks}/>);
+      expect(toDoList.find('li').length).toEqual(tasks.length);
+    })
+  });
+});
+```
+
+Also, you can to check components which have or don't have any specific CSS class, depending on props.
+
+```javascript
+//Task.js
+
+import React from "react";
+
+const Task = (props) => {
+  const { id, status, title } = props;
+
+  return (
+    <li className="list__item">
+      <input
+        id={id}
+        className="item__check"
+        type="checkbox"
+        onChange={() => {}}
+        checked={status}
+      />
+      <label htmlFor={id} className={`${status ? "item--done" : ""}`}>
+        {title}
+      </label>
+    </li>
+  );
+};
+
+export default Task;
+```
+
+```javascript
+//Task.test.js
+
+import React from "react";
+import { shallow } from "enzyme";
+
+import Task from "./Task";
+
+describe("Task component", () => {
+  it('when provided with the task was done"', () => {
+    const wrapper = shallow(
+      <Task id={0} status={true} title="Wash the dishes" />
+    );
+    expect(wrapper.find("label").hasClass("item--done")).toEqual(true);
+  });
+
+  it('when provided with the task will be do"', () => {
+    const wrapper = shallow(
+      <Task id={0} status={false} title="Wash the dishes" />
+    );
+    expect(wrapper.find("label").hasClass("item--done")).toEqual(false);
+  });
+});
+
+```
+
+### Mocking
+
+An object under test may have dependencies on other \(complex\) objects. To isolate the behavior of the object you can replace the other objects by mocks that simulate the behavior of the real objects. This is useful if the real objects are impractical to incorporate into the unit test.
+
+In short, mocking is creating objects that simulate the behavior of real objects.
+
+There are many libraries it helps to mock: 
+
+* [redux-mock-store ](https://github.com/reduxjs/redux-mock-store/blob/master/README.md) ****\(A mock store for testing Redux async action creators and middleware. The mock store will create an array of dispatched actions which serve as an action log for tests.\)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,4 +333,8 @@ exports[`snapshot renders correctly 1`] = `
 
 1. [Автотесты. Модульное тестирование;](https://www.youtube.com/watch?v=qaL70WegmaI)
 2. [Интеграционное тестирование интерфейсов](https://www.youtube.com/watch?v=dflmpqh_oRc);
-3. 
+3. [Testing React](https://www.youtube.com/playlist?list=PL8fumNHsC-3NaPNxh2bous6bBDWwJ4r1-) \(videos\)
+4. [JavaScript testing tutorial](https://wanago.io/courses/javascript-testing-tutorial/)
+
+
+
